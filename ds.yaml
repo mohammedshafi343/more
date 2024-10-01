@@ -1,0 +1,13 @@
+# complex_config.yaml
+default: &default
+  name: default_config
+  enabled: true
+  retries: 3
+
+dev:
+  <<: *default
+  retries: 5
+
+prod:
+  <<: *default
+  enabled: false
